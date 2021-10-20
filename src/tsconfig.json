@@ -1,0 +1,13 @@
+{
+  "extends": "../configs/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "#root": ["./"],
+      "#root/*": ["./*"],
+      "#assets/*": ["./assets/*"],
+      "#components": ["./components"],
+      "#components/*": ["./components/*"]
+    }
+  }
+}

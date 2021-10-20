@@ -22,7 +22,7 @@ export const prodConfig = merge(commonConfig, {
       // eslint-disable-next-line import/no-dynamic-require, global-require
       (require(resolveApp('package.json')) as any).homepage,
       process.env.PUBLIC_URL,
-    ).slice(0, -1),
+    ),
   },
   devtool: 'source-map',
   plugins: [new CopyPlugin({

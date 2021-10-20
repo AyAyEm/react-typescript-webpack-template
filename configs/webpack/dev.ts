@@ -20,6 +20,9 @@ export const devConfig = mergeWithRules({
     'webpack-dev-server/client?http://localhost:8080',
     './index.tsx',
   ],
+  output: {
+    publicPath: '/',
+  },
   module: {
     rules: [
       {

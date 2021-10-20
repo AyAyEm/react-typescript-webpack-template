@@ -26,6 +26,8 @@ jobs:
         run: yarn --frozen-lockfile
       - name: Build Code
         run: yarn build
+        env:
+          PUBLIC_URL: https://ayayem.github.io/react-typescript-webpack-template/
       - name: Push new code
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
@@ -59,4 +61,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
           GITHUB_ACTOR: AyAyEm
           GITHUB_EMAIL: ${{ secrets.EMAIL }}
-          PUBLIC_URL: https://ayayem.github.io/react-typescript-webpack-template/
